@@ -1,0 +1,988 @@
+body{
+	font-family: Helvetica;
+	margin: 0;
+}
+/*Left*/
+#Left{
+	height: 100%;
+	width: 20%;
+	float: left;
+	top: 0;
+	position: fixed;
+	color: #FFFFFF;
+	background-color: #32C9E7;
+	text-align: center;
+}
+#navbar {
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+}
+#headline{
+ font-family: 'Quicksand', sans-serif;
+ font-weight: 300;
+ text-align: center;
+ margin-bottom: -100px;
+ color: #32C9E7;
+}
+#navbarlinks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #32C9E7;
+}
+#navbar a{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #32C9E7;
+}
+#link {
+  display: inline;
+
+}
+#LeftText img{
+	padding-left: 10px;
+	width: 40%;
+}
+#LeftText{
+	width: 60%;
+	margin-top: 5%;
+	margin-right: auto;
+	margin-left: auto;
+}
+#logo img{
+	width: 100%;
+}
+#LeftProfile a h3{
+	background-color: #FFFFFF;
+	color: #32C9E7;
+	padding: 10px 50px;
+	border-radius: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	transition-duration: 0.4s;
+}
+#LeftProfile a h3:hover{
+	background-color: #D3D3D3;
+}
+#LeftProfile a{
+	text-decoration: none;
+}
+#LeftProfile img{
+	border-radius: 50px;
+	height: 100px;
+	width: 100px;
+	overflow: hidden;
+}
+#Logout a img{
+	margin-top: 100px;
+	transition-duration: 0.4s;
+	height: 45px;
+	width: 45px;
+	border-radius: 0px;
+}
+#Logout a img:hover{
+	margin-left: 20px;
+}
+
+/*Right*/
+#Right{
+	height: auto;
+}
+
+/*Index.php*/
+#IndexTop{
+	margin-top: -25px;
+	height: 140px;
+	width: 100%;
+	text-align: center;
+	background-color: #3a3d54; 
+}
+#IndexTop h1{
+	padding-top: 50px;
+	color: #FFFFFF; 
+}
+#Likes{
+	float: right;
+	margin-top: -30px;
+	margin-right: 48px;
+	margin-bottom: 0;
+	color:#32C9E7;
+	font-size: 16px;
+}
+#IndexOptions{
+	width: 100%;
+	margin-top: 30vh;
+}
+#IndexOptions ul{
+	width: 490px;
+	margin-left: auto;
+	margin-right: auto;
+	list-style: none;
+}
+#IndexOptions li {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#IndexOptions img{
+	height: 100px;
+	width: auto;
+	transition-duration: 0.4s;
+}
+#IndexOptions img:hover{
+	height: 110px;
+	width: auto;
+}
+#PostBox{
+	display: none;
+	/* overflow: hidden; */
+	left: 50%;
+	margin-left: -25%;
+	width: 50%;
+	height: 155px;
+	border-radius: 0px 0px 100px 100px;
+	background-color: #32C9E7;
+	transition: width 600ms ease-out, height 600ms ease-out;
+	transition-duration: 0.4s;
+	position: fixed;
+}
+#openComment {
+	margin-top: 45px;
+	background-color: #32C9E7;
+	transform: rotate(90deg);
+	border-radius: 0px 100px 100px 0;
+}
+#closeCommnet{
+		transform: rotate(270deg);
+		border-radius: 100px 0px 0px 100px;
+		display: none;
+		background-color: #32C9E7;
+		margin-top: 153px;
+		margin-left: 50%;
+		transition: 0.3s;
+}
+#PostBox.is-hidden {
+    transform: translateY(-100%);
+}
+#PostBox.is-visible {
+    transform: translateY(0);
+}
+#PostSubBox{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	transition-duration: 0.4s;
+}
+#PostSubBox textarea{
+	margin-top: 20px;
+	resize: none;
+	outline: none;
+	width: 80%;
+	height: 80px;
+	border: 3px solid #ccc;
+	border-radius:25px 0 0 25px;
+	padding: 12px 20px;
+	text-align: center;
+	transition-duration: 0.4s;
+}
+#PostSubBox textarea:focus{
+	border: 3px solid #555;
+}
+#PostSubBox button{
+	padding: 17px 10px;
+	text-align: left;
+	background: white;
+	border-radius:0 25px 25px 0;
+	margin-top: 20px;
+	transition-duration: 0.4s;
+	border: 3px solid #ccc;
+	margin-left: 3px;
+}
+#PostSubBox button,#PostBox textarea{
+	float: left;
+	display: inline-flex;
+}
+#PostSubBox button:hover{
+	background-color: #32C9E7;
+	border: 3px solid #555;
+}
+#PostSubBox img{
+	height: 40px;
+	width: 40px;
+}
+#Podcast{
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: none;
+}
+#Podcast img{
+	height: 70px;
+	width: 70px;
+	border-radius: 100%;
+	transition-duration: 0.4s;
+}
+#Podcast img:hover{
+	filter: blur(2px);
+}
+#Podcast [type="file"]{
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+#Podcast [type="file"] + label img{
+  float: left;
+	margin-left:10%;
+  cursor: pointer;
+}
+#Podcast [type="file"] + label h2{
+  margin-left: 50px;
+  color: #FFFFFF;
+  padding: 10px 50px;
+  background-color: #32C9E7;
+  margin-top: -10px;
+  float: left;
+  cursor: pointer;
+  border-radius: 80px;
+  transition-duration: 0.4s;
+}
+#Podcast [type="file"] + label h2:hover{
+  background-color: #85EBFF; 
+}
+#posts{
+	margin-top: 15%;
+}
+#contactimg{
+	margin-top: 25px;
+}
+#cright{
+float: right;
+margin-top: 40px;
+width: 25%;
+ font-family: 'Quicksand', sans-serif;
+ font-weight: 300;
+}
+#cleft{
+	width: 65%;
+	margin-top: 40px;
+	float: left;
+	padding-bottom: 250px;
+	 font-family: 'Quicksand', sans-serif;
+ font-weight: 300;
+}
+#contact{
+	margin-right: 25%;
+	margin-left: 25%; 
+}
+#EditProf{
+	display: none;
+	margin-top: 59px;
+	transition: width 600ms ease-out, height 600ms ease-out;
+	transition-duration: 0.4s;
+}
+.user{
+	width: 100%;
+	height: 50px;
+}
+.userinfo{
+	width: 80%;
+	float: left;
+}
+.userinfo img{
+	height: 40px;
+	width: 40px;
+	overflow: hidden;
+	float: left;
+	border-radius: 100%;
+	margin-left: 40px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+.userinfo h3{
+	padding-left: 20px;
+	padding-top: 10px;
+	color: #32C9E7;
+}
+.addfriend{
+	float: right;
+	width: 100px;
+}
+.addfriend img{
+	height: 40px;
+	width: 40px;
+}
+.add input{
+	height: 0;
+  	overflow: hidden;
+  	width: 0;
+  	border: none;
+}
+.add button{
+	margin: 10px;
+	height: 40px;
+	width: 40px;
+	background-color: #FFFFFF;
+	background-image: url(Images/Icons/add.png);
+	background-size: 35px 35px;
+ 	background-repeat: no-repeat;
+ 	border: none;
+ 	outline: none;
+ 	cursor: pointer;
+}
+.remove input{
+	height: 0;
+  	overflow: hidden;
+  	width: 0;
+  	border: none;
+}
+.remove button{
+	margin: 10px;
+	height: 40px;
+	width: 40px;
+	background-color: #FFFFFF;
+	background-image: url(Images/Icons/save.png);
+	background-size: 35px 35px;
+ 	background-repeat: no-repeat;
+ 	transition-duration: 0.4s;
+ 	border: none;
+ 	outline: none;
+ 	cursor: pointer;
+}
+.remove button:hover{
+	background-image: url(Images/Icons/delete.png);
+}
+.adminUi{
+	float: right;
+	width: 200px;
+}
+.adminUi input{
+	height: 0;
+  	overflow: hidden;
+  	width: 0;
+  	border: none;
+}
+.adminUi button{
+	background: none;
+	outline: none;
+	border:none;
+	cursor: pointer;
+	float: left;
+	height: 40px;
+	width: 40px;
+}
+.adminUi ul{
+	margin-top: 0px;
+	list-style: none;
+	width: 200px;
+}
+.adminUi ul li{
+	float: left;
+	height: 40px;
+	width: 40px;
+	margin-right: 20px;
+}
+.post{
+	margin-top: 150px;
+	width: 40%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 40px;
+	border: 3px solid #32C9E7;
+	box-shadow: 1px 3px 10px #32C9E7;
+}
+
+.podcastpostmain img{
+	margin-left: 60px;
+	margin-right: 40px;
+	margin-top: 20px;
+	height: 100px;
+	width: 100px;
+	overflow: hidden;
+}
+.podcastpostmain h4{
+	color: #555;
+	margin-left: 60px;
+}
+.podcastpostmain p{
+	color: #555;
+	margin-left: 60px;
+	margin-bottom: 40px;
+	margin-right: 60px;
+}
+.podcastpostmain audio{
+	width: 60%;
+	margin-bottom: 20px;
+}
+.like{
+	width: 100%;
+	height: 50px;
+}
+.like input{
+	height: 0;
+  	overflow: hidden;
+  	width: 0;
+  	border: none;
+}
+.like button{
+	cursor: pointer;
+	background: none;
+	border: none;
+	float: right;
+	margin-right: 40px;
+	border-radius: 90px;
+	margin-top: 7px;
+	transition-duration: 0.2s;
+}
+.like button:hover{
+	filter:blur(2px);
+}
+.like button img{
+	height: 100%;
+	width: 100%;
+}
+.imagepostmain{
+	width: 100%;
+}
+.imagepostmain p{
+	color: #555;
+	margin-top: 40px;
+	margin-left: 60px;
+	margin-bottom: 40px;
+	margin-right: 60px;
+	padding-bottom: 20px;
+    border-bottom: 1px solid #32C9E7;
+
+}
+.imagebox{
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+	transition-duration: 0.4s;
+}
+.imagebox img{
+	width: 100%;
+}
+#indexbot{
+	width: 50px;
+	height: 50px;
+	margin-top: 120px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#indexbot img{
+	height: 50px;
+	width: 50px;
+}
+#edith3{
+	text-align: center;
+    margin-left: 130px;
+}
+#batton{
+	text-decoration: none;
+}
+.commentinput{
+	margin-top: -70px;
+	width: 100%;
+	height: 100px;
+}
+.commentinputbox input{
+	width: 70%;
+	border: 3px solid #ccc;
+	border-radius: 4px;
+	padding: 12px 20px;
+	outline: none;
+	transition-duration: 0.4s;
+}
+.commentinputbox input:focus{
+	border: 3px solid #555;
+}
+.commentinputbox{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.commentinputbox button{
+	/* float: right; */
+	background: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	border-radius: 100px;
+	/* margin-right: 17%; */
+	transition-duration: 0.4s;
+}
+.commentinputbox button:hover{
+	background-color: #32C9E7;
+}
+.commentinputbox img{
+	height: 40px;
+	width: 40px;
+}
+.commentsendid input{
+	height: 0;
+	overflow: hidden;
+	width: 0;
+	border: none;
+	display: none;
+}
+.comment{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.commentuserinfo{
+	margin-top: 10px;
+	height: 30px;
+}
+.commentuserinfo img{
+	margin-left: 10%;
+	float: left;
+	height: 30px;
+	width: 30px;
+	overflow: hidden;
+	border-radius: 15px;
+}
+.commentuserinfo h4{
+	color: #32C9E7;
+	float: left;
+	margin-top: 8px;
+	margin-left: 10px;
+}
+.commentcontent{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.commentcontent p{
+	margin-left: -20px;
+	padding-right: 20%;
+}
+.commentcontent h5{
+	padding-right: 20%;
+}
+
+
+
+
+
+
+
+
+
+/*Profile.php*/
+#RightProfile{
+	width: 100%;
+	background: linear-gradient(
+      rgba(50, 201, 231, 0.00), 
+      rgba(50, 201, 231, 0.50)
+    ), url(Images/Media/pattern.png);
+	background-size: cover;
+	background-position: center;
+	height: 25vh;
+	margin-top: 25px;
+}
+#RightProImgCont{
+	width: 80%;
+	float: left;
+}
+#RightProImg{
+	width: 20vh;
+	padding-left: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#RightProImg img{
+	height: 20vh;
+	border-radius: 100%;
+	width: 20vh;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 160px;
+}
+#ProPost{
+
+}
+#ProUpt [type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+#ProUpt [type="file"] + label{
+  cursor: pointer;
+  padding: 35px 35px 20px;
+  transition-duration: 0.4s;
+  background-image: url("Images/Icons/profile.png");
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+}
+#ProUpt [type="file"] + label:hover{
+    background-image: url("Images/Icons/profileadd.png");
+}
+#ProUpt{
+	float: right;
+	background-color: white;
+	color: #32C9E7;
+	text-align: center;
+	width: 20%;
+	height: 60px;
+	border-radius: 0px 0px 0px 30px;
+	transition: width 600ms ease-out, height 600ms ease-out;
+	transition-duration: 0.4s;
+}
+#ProUpt:hover{
+
+		box-shadow: 1px 3px 10px #32C9E7;
+}
+#ProUpt a:hover{
+	transition-duration: 0.6s;
+}
+#ProUpt form{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+#ProUpt button{
+	margin-left: 40px;
+	margin-top: 40px;
+	background-color: #FFFFFF;
+	border: none;
+	border-radius: 20px;
+	color: #32C9E7;
+	cursor: pointer;
+	padding: 10px 50px;
+}
+#ProUpt button:hover{
+	transition-duration: 0.4s;
+	background-color: #85EBFF;
+}
+.filler{
+	color: #FFFFFF;
+}
+#profilebot{
+	width: 100%;
+	float: right;
+	margin-left: auto;
+	margin-right: auto;
+}
+#profilebotimg{
+	width: 50px;
+	height: 50px;
+	margin-top: 80px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto; 
+}
+#profilebot img{
+	height: 50px;
+	width: 50px;
+}
+
+
+
+
+
+
+
+
+/*Signup.php*/
+#SignUp h2{
+	text-align: center;
+	margin-top: 5vh;
+}
+#SignUp h2 a{
+	text-decoration: none;
+	color: #32C9E7;
+	transition-duration: 0.4s;
+}
+#SignUp h2 a:hover{
+	color: #85EBFF;
+}
+#SignupOptions{
+	width: 100%;
+	height: 30vh;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("Images/Media/1.jpg");
+	background-size: cover;
+	background-position: center;
+}
+#SignupOptions img{
+	display: block;
+	width: auto;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto; 
+}
+
+
+
+
+
+
+/*Login.php*/
+#loginSuc{
+	color: #32C9E7;
+	width: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#loginSuc img{
+	margin-top: 10vh;
+}
+#SignInfo{
+	text-align: center;
+	color: #FFFFFF;
+	margin-top: 40vh;
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(
+      rgba(50, 201, 231, 0.05), 
+      rgba(50, 201, 231, 0.50)
+    ), url("Images/Media/1.jpg");
+    background-size: cover;
+	background-position: center;
+}
+#SignInfo img{
+	height: 120px;
+}
+#Info{
+	color: #32C9E7;
+	height: 75vh;
+	width: 60%;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFFFFF;
+	border-radius: 50px;
+}
+#Info h2{
+	padding-top: 40px;
+}
+#Info p{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#Info img{
+	width: 80%;
+	height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+#TopOptions{
+	width: 70px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 50px;
+}
+#TopOptions img{
+	height: 70px;
+	width: auto;
+	transition-duration: 0.4s;
+}
+#Title{
+	width: 400px;
+	margin-top: 5vh;
+	margin-right: auto;
+	margin-left: auto;
+}
+#Title ul{
+	list-style: none;
+	margin: none;
+}
+#Title li{
+	margin-top: 20px;
+	margin-left: 0px;
+}
+#Title input{
+	width: 300px;
+	border: 3px solid #ccc;
+	border-radius: 4px;
+	padding: 12px 20px;
+	outline: none;
+	transition-duration: 0.4s;
+}
+#Title input:focus{
+	border: 3px solid #555;
+}
+#SaveButton{
+	color: #FFFFFF;
+	text-align: right;
+	width: 500px;
+	margin-top: 70px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#SaveButton button{
+	color: #FFFFFF;
+	background-color: #32C9E7;
+	width: 120px;
+	height: 40px;
+	border: none;
+	border-radius: 100px;
+	outline: none;
+	cursor: pointer;
+	transition-duration: 0.4s;
+	font-weight: bold;
+}
+#SaveButton button:hover{
+	background-color: #85EBFF;
+}
+.errormessage{
+	margin-left: auto;
+	margin-right: auto;
+	height: 40px;
+	width: 400px;
+	color:#ec1313;
+}
+.errormessage img{
+	float: left;
+	height: 30px;
+	width: 30px;
+	margin-left: 40px;
+	margin-right: 20px;
+}
+.errormessage p{
+	margin-left: 100px;
+	padding-top: 5px;
+	width: 320px;
+}
+
+
+
+
+
+
+
+
+#SearchBar {
+	width: 400px;
+	height: 40px;
+	padding-left: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+#SearchBar input{
+	float: left;
+	width: 300px;
+	border: 3px solid #ccc;
+	border-radius: 4px;
+	padding: 12px 20px;
+	outline: none;
+	transition-duration: 0.4s;
+}
+#SearchBar input:focus{
+	border: 3px solid #555;
+}
+#SearchBar button{
+	float: left;
+	height: 40px;
+	width: 40px;
+	background-color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+}
+#SearchBar img{
+	margin-left: 0px;
+	height: 40px;
+	width: 40px;
+}
+
+#BottomOptions{
+	width: 370px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#BottomOptions form{
+	float: right;
+	margin-right: 20px;
+}
+#BottomOptions li{
+	float: right;
+	list-style: none;
+}
+#BottomOptions img{
+	margin-right: 20px;
+	height: 60px;
+	width: auto;
+	transition-duration: 0.4s;
+}
+#BottomOptions img:hover{
+	height: 65px;
+}
+#BottomOptions button{
+	width: 60px;
+	background-color: #FFFFFF;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+/*Footer*/
+#RightBottom{
+	float: right;
+	width: 100%;
+	height: 150px;
+	background-color: #292929;
+}
+#RightBottom p{
+	float: right;
+	color: #464646;
+	margin-top: 75px;
+	margin-right: 40px;
+}
+#IndexBottom{
+	margin-top: 75vh;
+	float: right;
+	width: 100%;
+	height: 150px;
+	background-color: #292929;
+}
+#IndexBottom p{
+	float: right;
+	color: #464646;
+	margin-top: 75px;
+	margin-right: 40px;
+}
+#SignBottom{
+	float: right;
+	width: 100%;
+	height: 150px;
+	background-color: #292929;
+}
+#SignBottom p{
+	float: right;
+	color: #464646;
+	margin-top: 75px;
+	margin-right: 40px;
+}
